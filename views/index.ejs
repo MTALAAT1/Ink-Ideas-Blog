@@ -1,0 +1,95 @@
+<%- include("partials/header.ejs") %>
+<section class="hero">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis">
+    <div class="col-lg-6 px-0 hero">
+      <h1 class="display-4 fst-italic fw-bolder">
+        Ideas worth reading. Stories worth sharing.
+      </h1>
+      <p class="lead my-3">
+        Explore articles, perspectives, and stories created to inspire
+        curiosity, encourage new ideas, and make everyday life a little more
+        interesting.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="featuresSection">
+  <div class="px-4 py-5">
+    <h2 class="pb-2 border-bottom">Explore Our Topics</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+        >
+          <img src="./images/tech.png" alt="tech logo" class="features" />
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Technology</h3>
+        <p>Exploring the ideas and innovations shaping tomorrow.</p>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+        >
+          <img
+            src="./images/lifestyel.png"
+            alt="lifestylelogo"
+            class="features"
+          />
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Lifestyle</h3>
+        <p>Practical thoughts and inspiration for everyday life.</p>
+      </div>
+      <div class="feature col">
+        <div
+          class="feature-icon d-inline-flex align-items-center justify-content-center bg-gradient fs-2 mb-3"
+        >
+          <img src="./images/travel.png" alt="travel" class="features" />
+        </div>
+        <h3 class="fs-2 text-body-emphasis">Travel</h3>
+        <p>Places, experiences, and stories worth discovering.</p>
+        <a href="/create" class="icon-link mt-5 text-decoration-none">
+          Create Your Own Post
+          <img src="./images/arrow.png" alt="arrow" class="arrowClick" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section >
+  <% if(posts.length === 0) {%>
+<h2 class="display-5 link-body-emphasis mb-1">No Posts have been Published Yet !... </h2>
+        <p class="blog-post-meta"></p>
+        <% }else { %>
+<% posts.forEach((post ,index) => { %>
+ <div class="post">
+  <article class="blog-post px-5 py-3 mb-3">
+      <% if (post.date !== undefined){ %>
+      <p class="mb-3"><%=post.date%></p>
+          <% } %>
+
+      <% if (post.title !== undefined){ %>
+      <h2 class="display-5 link-body-emphasis mb-5"><%= post.title %></h2>
+          <% } %>
+        
+    <% if (post.body !== undefined){ %>
+      <p class="blog-post-meta"><%= post.body %></p>
+        <% } %>
+  </article>
+
+  <div class="d-flex justify-content-end me-5">
+
+    <form action="/edit" method="POST">
+    <button type="submit" class="btn" name="postIndexForEdit" value="<%=index%>">Edit</button>
+    </form>
+
+    <form action="/delete" method="POST">
+    <button type="submit" class="btn" name="postIndex" value="<%=index%>">Delete</button>
+      </form>
+  </div>
+  </div>
+  <% }) ;} %>
+  
+</section>
+
+
+<%-include("partials/footer.ejs") %>

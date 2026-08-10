@@ -1,0 +1,105 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+a {
+  color: #1d2420 !important;
+}
+
+.pages {
+  background-color: #e8ede6;
+}
+
+.container {
+  font-family: "Source Serif 4", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*header */
+.headerLogo {
+  width: 8rem;
+  height: 8rem;
+}
+
+/*home*/
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  background-color: #26352c !important;
+}
+
+.nav-link,
+.hero {
+  color: #1d2420 !important;
+  border-radius: 0.75rem;
+}
+
+.featuresSection {
+  background-color: #d8e1d5;
+  margin-bottom: 25px;
+  border-radius: 0.75rem;
+}
+.hero {
+  background-color: #f3f5f0;
+}
+.post {
+  background-color: #f3f5f0;
+  border-radius: 0.75rem;
+  margin-bottom: 25px;
+}
+/*******/
+
+/* create post and edit */
+
+.create {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.title {
+  margin-bottom: 25px;
+}
+.titleText {
+  width: 100%;
+  height: 10rem;
+  background-color: #f3f5f0;
+  border-radius: 0.75rem;
+  border: none;
+  overflow-y: auto;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.bodyText {
+  width: 100%;
+  height: 30rem;
+  background-color: #f3f5f0;
+  border-radius: 0.75rem;
+  border: none;
+  overflow-y: auto;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+.edit {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.postButton,
+.deleteButton {
+  background-color: #26352c !important;
+  height: 2.5rem;
+  width: 4rem;
+  border-radius: 0.75rem;
+  color: #ffff;
+  margin-right: 10px;
+}
