@@ -42,7 +42,7 @@ blog-web-app/
 Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/MTALAAT1/Ink-Ideas-Blog.git
 ```
 
 Go to the project folder:
