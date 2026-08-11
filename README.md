@@ -54,7 +54,7 @@ cd Ink-Ideas-Blog
 Install the required packages:
 
 ```bash
-npm install i
+npm install 
 ```
 
 Run the application:
